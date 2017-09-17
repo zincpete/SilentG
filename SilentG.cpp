@@ -73,18 +73,6 @@ void AtomicBuffers::EndWriteBuffer(AtomicBuffers::Buffer * buffer)
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
-void RadioInterface::Protocol::Set(const Protocol &protocol, int tolerance)
-{
-    sync.high = protocol.sync.high + tolerance;
-    sync.low = protocol.sync.low + tolerance;
-    zero.high = protocol.zero.high + tolerance;
-    zero.low  = protocol.zero.low + tolerance;
-    one.high = protocol.one.high + tolerance;
-    one.low = protocol.one.low + tolerance;
-}
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
 RadioInterface * RadioInterface::s_Instance = nullptr;
 //-----------------------------------------------------------------------------
 RadioInterface::RadioInterface()
